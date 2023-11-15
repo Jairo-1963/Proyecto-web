@@ -1,0 +1,25 @@
+body {
+    background-color: #f5f5f5; /* Color de fondo gris */
+  }
+.carousel-inner {
+    background-color: #ffffff; /* Color de fondo blanco para las tarjetas */
+  }
+.carousel {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px; /* Ancho máximo del carrusel */
+  }
+.carousel-inner .carousel-item .card {
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
+    width: 90%; /* Ancho de la tarjeta */
+    max-width: 600px; /* Ancho máximo de la tarjeta */
+    background-color: #ffffff; /* Color de fondo blanco para las tarjetas */
+    transition: transform 0.3s ease; /* Transición suave al hacer la tarjeta más grande */
+  }
+.carousel-inner .carousel-item .card:hover {
+    transform: scale(1.1); /* Hace la tarjeta un 10% más grande al pasar el mouse sobre ella */
+  }
+.carousel {
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+    max-width: 600px; /* Ancho máximo del carrusel */
+  }

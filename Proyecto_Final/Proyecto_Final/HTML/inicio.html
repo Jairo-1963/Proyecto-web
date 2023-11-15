@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Register - SolverPro</title>
+    <link rel="stylesheet" href="../css/inicio.css">
+</head>
+<body>
+    <main>
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Regístrate</button>
+                </div>
+            </div>
+            <!--Formulario de Login y registro-->
+            <div class="contenedor__login-register">
+                <!--Login-->
+                <form action="../PHP/inicio.php" method="POST" class="formulario__login">
+                    <h2>INICIAR SESIÓN</h2>
+                    <input type="text" placeholder="Usuario" name="usuario" required>
+                    <input type="password" placeholder="Contraseña" name="contraceña" required>
+                    <button type="submit">Iniciar Sesión</button> <br><br>
+                    <a class="font-italic" href="#">¿Olvidó su nombre de usuario o contraseña?</a>
+                </form>
+                <!--Register-->
+                <form action="../PHP/crear_cuenta.php" method="POST" class="formulario__register">
+                    <h2>REGISTRO DE USUARIOS</h2>
+                    <input type="text" placeholder="Nombre completo" name="nombre_completo" required>
+                    <input type="email" placeholder="Correo Electronico" name="correo" required>
+                    <input type="text" placeholder="Usuario" name="usuario" required>
+                    <input type="password" placeholder="Contraseña" id="contrasena" name="contrasena" pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{1,15}$" title="La contraseña debe contener al menos una letra, un número, un carácter especial (@$!%*?&) y tener una longitud máxima de 15 caracteres" required>
+                    <input type="password" placeholder="Confirmar Contraseña" id="confirmarContrasena" pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{1,15}$" title="La contraseña debe contener al menos una letra, un número, un carácter especial (@$!%*?&) y tener una longitud máxima de 15 caracteres" required>
+                    <button type="submit">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="../JS/inicio.js"></script>
+</body>
+</html>
